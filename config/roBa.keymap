@@ -89,6 +89,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        kp_grth_lshftmod_larw: kp_grth_lshftmod_larw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_GRTH_LSHFTMOD_LARW";
+            bindings = <&kp GREATER_THAN>, <&kp LEFT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        kp_lpar_lshftmod_dwarw: kp_lpar_lshftmod_dwarw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_LPAR_LSHFTMOD_DWARW";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp DOWN_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        kp_rpar_lshftmod_rarw: kp_rpar_lshftmod_rarw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_RPAR_LSHFTMOD_RARW";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -116,10 +143,10 @@
 
         NUM {
             bindings = <
-&kp SLASH                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTRK                                    &kp QUESTION       &kp AMPERSAND     &kp LEFT_BRACKET         &kp RIGHT_BRACKET      &kp SLASH
-&kp MINUS                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &kp CARET      &kp HASH          &kp EXCLAMATION    &kp PIPE          &kp_lbra_lshftmod_uparw  &kp RIGHT_BRACE        &kp COLON
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL      &kp AT            &kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_PARENTHESIS     &kp RIGHT_PARENTHESIS  &kp TILDE
-&kp BACKSPACE               &kp DELETE       &trans           &trans           &trans      &trans         &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES                                                                    &kp UNDER
+&kp SLASH                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTRK                                    &kp QUESTION       &kp AMPERSAND           &kp LEFT_BRACKET         &kp RIGHT_BRACKET       &kp SLASH
+&kp MINUS                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &kp CARET      &kp HASH          &kp EXCLAMATION    &kp PIPE                &kp_lbra_lshftmod_uparw  &kp RIGHT_BRACE         &kp COLON
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL      &kp AT            &kp LESS_THAN      &kp_grth_lshftmod_larw  &kp_lpar_lshftmod_dwarw  &kp_rpar_lshftmod_rarw  &kp TILDE
+&kp BACKSPACE               &kp DELETE       &trans           &trans           &trans      &trans         &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES                                                                           &kp UNDER
             >;
         };
 
