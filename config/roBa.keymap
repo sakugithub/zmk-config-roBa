@@ -116,6 +116,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        kp_bck_lshftmod_home: kp_bck_lshftmod_home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_BCK_LSHFTMOD_HOME";
+            bindings = <&kp BACKSPACE>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        kp_del_lshftmod_end: kp_del_lshftmod_end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KP_DEL_LSHFTMOD_END";
+            bindings = <&kp DELETE>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -123,10 +141,10 @@
 
         default_layer {
             bindings = <
-&kp_q_dt_esc      &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp_q_dt_esc      &kp W         &kp E         &kp R                        &kp T                                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS              &kp H        &kp J  &kp K      &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON          &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp_bck_lshftmod_home  &lt 1 ENTER                             &kp_del_lshftmod_end
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
